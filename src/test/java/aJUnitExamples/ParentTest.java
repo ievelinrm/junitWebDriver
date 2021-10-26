@@ -3,7 +3,7 @@ package aJUnitExamples;
 import org.junit.After;
 import org.junit.Before;
 
-public class ParentTest {
+public class  ParentTest {
 	@Before
 	public void setUp() {
 		//do something

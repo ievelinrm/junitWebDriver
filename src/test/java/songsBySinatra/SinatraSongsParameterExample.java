@@ -7,7 +7,7 @@ import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
 
 @RunWith(JUnitParamsRunner.class)
-public class SinatraSongsParameterExample extends SinatraSongBaseTest {
+public class SinatraSongsParameterExample extends  SinatraSongBaseTest {
 	
 	@Test
 	@FileParameters("./data/params.csv")
