@@ -3,6 +3,7 @@ package songsBySinatra;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -17,7 +18,7 @@ public class SinatraSongBaseTest {
 	protected WebDriver driver;
 	public static final String WINDOWS_DRIVER_PATH = "C:\\Windows\\";
 	public static final String UNIX_DRIVER_PATH = "/usr/local/bin/";
-	
+	@Before
 	public void setUp(String browser, String url) {
 		driver = startBrowser(System.getProperty("os.name"), browser);
 		driver.get(url);
@@ -54,7 +55,7 @@ public class SinatraSongBaseTest {
 			return new ChromeDriver();
 		}
 	}
-	
+
 	@After
 	public void tearDown() {
 		driver.quit();

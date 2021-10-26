@@ -49,9 +49,9 @@ public class ParentTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
         System.out.println("We're in Login page");
         WebElement emailField = driver.findElement(By.id("email"));
-        emailField.sendKeys("jomarnavarro@gmail.com");
+        emailField.sendKeys(user);
         WebElement passwordField = driver.findElement(By.id("password"));
-        passwordField.sendKeys("Test@1234");
+        passwordField.sendKeys(password);
         WebElement loginButton = driver.findElement(By.cssSelector(".submit_btn"));
         loginButton.click();
     }
@@ -67,7 +67,7 @@ public class ParentTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("edit_project_modal_field_name")));
         System.out.println("We're on Add Project pop up");
         WebElement projectNameField = driver.findElement(By.id("edit_project_modal_field_name"));
-        projectNameField.sendKeys("proyecto14");
+        projectNameField.sendKeys(nombreProyecto);
     }
 
     public void validarProyecto(String nombreProyecto, String color) {
