@@ -30,7 +30,7 @@ public class ParentTest {
 
     @After
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
     public void navegarUrl(String url) {
@@ -64,6 +64,7 @@ public class ParentTest {
     public void crearProyecto(String nombreProyecto, String color) {
         WebElement addProjectIcon = driver.findElement(By.cssSelector("[data-track='navigation|projects_quick_add']"));
         addProjectIcon.click();
+        addProjectIcon.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("edit_project_modal_field_name")));
         System.out.println("We're on Add Project pop up");
         WebElement projectNameField = driver.findElement(By.id("edit_project_modal_field_name"));
@@ -71,5 +72,6 @@ public class ParentTest {
     }
 
     public void validarProyecto(String nombreProyecto, String color) {
+
     }
 }
